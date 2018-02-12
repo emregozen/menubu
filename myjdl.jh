@@ -1,0 +1,11 @@
+entity LANGUAGE {
+	ID Integer,
+    CODE String,
+    NAME String,
+    CREATE_DATE Instant,
+    CREATE_USER String,
+    UPDATE_DATE Instant,
+    UPDATE_USER String,
+    USABLE_IN_EMAIL String,
+    TROYA_CODE String,
+}
