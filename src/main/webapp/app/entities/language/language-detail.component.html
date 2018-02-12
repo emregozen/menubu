@@ -1,0 +1,54 @@
+
+<div *ngIf="lANGUAGE">
+    <h2><span>LANGUAGE</span> {{lANGUAGE.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>C ODE</span></dt>
+        <dd>
+            <span>{{lANGUAGE.cODE}}</span>
+        </dd>
+        <dt><span>N AME</span></dt>
+        <dd>
+            <span>{{lANGUAGE.nAME}}</span>
+        </dd>
+        <dt><span>C REATEDATE</span></dt>
+        <dd>
+            <span>{{lANGUAGE.cREATEDATE | date:'medium'}}</span>
+        </dd>
+        <dt><span>C REATEUSER</span></dt>
+        <dd>
+            <span>{{lANGUAGE.cREATEUSER}}</span>
+        </dd>
+        <dt><span>U PDATEDATE</span></dt>
+        <dd>
+            <span>{{lANGUAGE.uPDATEDATE | date:'medium'}}</span>
+        </dd>
+        <dt><span>U PDATEUSER</span></dt>
+        <dd>
+            <span>{{lANGUAGE.uPDATEUSER}}</span>
+        </dd>
+        <dt><span>U SABLEINEMAIL</span></dt>
+        <dd>
+            <span>{{lANGUAGE.uSABLEINEMAIL}}</span>
+        </dd>
+        <dt><span>T ROYACODE</span></dt>
+        <dd>
+            <span>{{lANGUAGE.tROYACODE}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'language/'+ lANGUAGE.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
