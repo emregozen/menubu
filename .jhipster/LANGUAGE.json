@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "cODE",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nAME",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cREATEDATE",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "cREATEUSER",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "uPDATEDATE",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "uPDATEUSER",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "uSABLEINEMAIL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tROYACODE",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180212123035",
+    "entityTableName": "language",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
