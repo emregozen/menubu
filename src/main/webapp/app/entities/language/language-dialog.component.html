@@ -1,0 +1,69 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myLANGUAGELabel">Create or edit a LANGUAGE</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!lANGUAGE.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="lANGUAGE.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_cODE">C ODE</label>
+            <input type="text" class="form-control" name="cODE" id="field_cODE"
+                [(ngModel)]="lANGUAGE.cODE" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_nAME">N AME</label>
+            <input type="text" class="form-control" name="nAME" id="field_nAME"
+                [(ngModel)]="lANGUAGE.nAME" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_cREATEDATE">C REATEDATE</label>
+            <div class="d-flex">
+                <input id="field_cREATEDATE" type="datetime-local" class="form-control" name="cREATEDATE" [(ngModel)]="lANGUAGE.cREATEDATE"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_cREATEUSER">C REATEUSER</label>
+            <input type="text" class="form-control" name="cREATEUSER" id="field_cREATEUSER"
+                [(ngModel)]="lANGUAGE.cREATEUSER" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_uPDATEDATE">U PDATEDATE</label>
+            <div class="d-flex">
+                <input id="field_uPDATEDATE" type="datetime-local" class="form-control" name="uPDATEDATE" [(ngModel)]="lANGUAGE.uPDATEDATE"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_uPDATEUSER">U PDATEUSER</label>
+            <input type="text" class="form-control" name="uPDATEUSER" id="field_uPDATEUSER"
+                [(ngModel)]="lANGUAGE.uPDATEUSER" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_uSABLEINEMAIL">U SABLEINEMAIL</label>
+            <input type="text" class="form-control" name="uSABLEINEMAIL" id="field_uSABLEINEMAIL"
+                [(ngModel)]="lANGUAGE.uSABLEINEMAIL" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_tROYACODE">T ROYACODE</label>
+            <input type="text" class="form-control" name="tROYACODE" id="field_tROYACODE"
+                [(ngModel)]="lANGUAGE.tROYACODE" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
