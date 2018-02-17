@@ -45,6 +45,18 @@ public class CacheConfiguration {
             cm.createCache(io.github.menubu.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.menubu.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.menubu.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Region.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Task.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Job.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.Job.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(io.github.menubu.application.domain.JobHistory.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
